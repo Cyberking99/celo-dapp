@@ -167,7 +167,7 @@ document
         .writeProduct(...params)
         .send({ from: kit.defaultAccount })
     } catch (error) {
-      notification(`⚠️ New ${error}.`)
+      notification(`⚠️ ${error}.`)
     }
     notification(`🎉 You successfully added "${params[0]}".`)
     getProducts()
@@ -180,7 +180,7 @@ document.querySelector("#marketplace").addEventListener("click", async (e) => {
     try {
       await approve(products[index].price)
     } catch (error) {
-      notification(`⚠️ New2 ${error}.`)
+      notification(`⚠️ ${error}.`)
     }
     notification(`⌛ Awaiting payment for "${products[index].name}"...`)
     try {
@@ -191,7 +191,7 @@ document.querySelector("#marketplace").addEventListener("click", async (e) => {
       getProducts()
       getBalance()
     } catch (error) {
-      notification(`⚠️ New3 ${error}.`)
+      notification(`⚠️ ${error}.`)
     }
   }
 })  
