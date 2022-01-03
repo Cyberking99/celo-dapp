@@ -27,7 +27,7 @@ const connectCeloWallet = async function () {
 
       contract = new kit.web3.eth.Contract(marketplaceAbi, MPContractAddress)
     } catch (error) {
-      notification(`⚠️ ${error}.`)
+      notification(`⚠️ New ${error}.`)
     }
   } else {
     notification("⚠️ Please install the CeloExtensionWallet.")
