@@ -27,7 +27,7 @@ const connectCeloWallet = async function () {
 
       contract = new kit.web3.eth.Contract(marketplaceAbi, MPContractAddress)
     } catch (error) {
-      notification(`⚠️ New ${error}.`)
+      notification(`⚠️ ${error}.`)
     }
   } else {
     notification("⚠️ Please install the CeloExtensionWallet.")
@@ -167,7 +167,7 @@ document
         .writeProduct(...params)
         .send({ from: kit.defaultAccount })
     } catch (error) {
-      notification(`⚠️ ${error}.`)
+      notification(`⚠️ New ${error}.`)
     }
     notification(`🎉 You successfully added "${params[0]}".`)
     getProducts()
@@ -180,7 +180,7 @@ document.querySelector("#marketplace").addEventListener("click", async (e) => {
     try {
       await approve(products[index].price)
     } catch (error) {
-      notification(`⚠️ ${error}.`)
+      notification(`⚠️ New2 ${error}.`)
     }
     notification(`⌛ Awaiting payment for "${products[index].name}"...`)
     try {
@@ -191,7 +191,7 @@ document.querySelector("#marketplace").addEventListener("click", async (e) => {
       getProducts()
       getBalance()
     } catch (error) {
-      notification(`⚠️ ${error}.`)
+      notification(`⚠️ New3 ${error}.`)
     }
   }
 })  
